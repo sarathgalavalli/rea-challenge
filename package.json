@@ -4,9 +4,12 @@
   "description": "This is a repository to showcase the round 1 interview of rea group requirements.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --open --config webpack.dev.ts",
-    "build": "webpack --mode production --config webpack.prod.ts"
+    "build": "webpack --mode production --config webpack.prod.ts",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -20,16 +23,28 @@
   },
   "homepage": "https://github.com/sarathgalavalli/rea-challenge#readme",
   "dependencies": {
+    "@chakra-ui/gatsby-plugin": "^2.0.1",
+    "@chakra-ui/react": "^1.6.8",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.0",
+    "@types/jest": "^27.0.2",
     "eslint-config-prettier": "^8.3.0",
+    "framer-motion": "^4.1.17",
+    "jest": "^27.2.1",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.5",
     "ts-loader": "^9.2.6"
   },
   "devDependencies": {
+    "@storybook/react": "^6.3.8",
     "@types/html-webpack-plugin": "^3.2.6",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "@types/storybook__react": "^5.2.1",
     "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
