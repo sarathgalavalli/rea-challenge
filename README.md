@@ -34,8 +34,34 @@ nvm use v14
 
 Step 1: Clone the application from git into your local.
 ```
-git clone 
+git clone https://github.com/sarathgalavalli/rea-challenge.git
 ```
+
+Step 2: Open terminal and change directory to rea-challenge and run
+```
+npm install
+```
+
+Step 3: Build the applciation
+```
+npm build
+```
+
+Step 4: Run the application. this should open the application in your browser via localhost:8080 until unless something else is running the port or already using the port.
+```
+npm run dev
+```
+
+# Storybook
+
+This application was created using storybook, an application for UI renderer to create and render components. The documentation of story book can be found via https://github.com/storybookjs/storybook/blob/next/README.md
+The storybook has been added to the applciation to have better documentation for application at component level where any user can play around with each component to understand the application at component level. In order to access the components used in the application or to play around with components run:
+```
+yarn storybook
+```
+
+#Testing
+
 
 
 
