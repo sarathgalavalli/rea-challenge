@@ -55,12 +55,15 @@ npm run dev
 # Storybook
 
 This application was created using storybook, an application for UI renderer to create and render components. The documentation of story book can be found via https://github.com/storybookjs/storybook/blob/next/README.md
-The storybook has been added to the applciation to have better documentation for application at component level where any user can play around with each component to understand the application at component level. In order to access the components used in the application or to play around with components run:
+The storybook has been added to the applciation to have better documentation for application at component level where any user can play around with each component to understand the application at component level. In order to access the components used in the application or to play around with components run the following command in terminal on project directory.
 ```
 yarn storybook
 ```
 
-#Testing
+# Testing
+
+
+
 
 
 
