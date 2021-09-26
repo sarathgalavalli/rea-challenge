@@ -7,7 +7,7 @@ Overview
 This project is a simple react-typescript based application where users can view properties and save them which are of interest by hovering on the property with their mouse cursor. This application is desinged to work in chrome version 92.0.4515.159 or below. In future the scope expands to support for cross-browser.
 Before we dive deep into the installation we need to make note of a few things. 
 
-<b>This installation is specifically for mac users. the application can be installed on windows via similar alternative window commands.</b>
+<b>This installation is specifically for mac users. The application can be installed on windows via similar alternative window commands.</b>
 
 # Node Version
 
@@ -30,6 +30,12 @@ nvm install v14
 nvm use v14
 ```
 
+#Installation
+
+Step 1: Clone the application from git into your local.
+```
+git clone 
+```
 
 
 
