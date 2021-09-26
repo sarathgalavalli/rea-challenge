@@ -6,7 +6,16 @@ export interface HoverButtonProps extends ButtonProps {
 	onClick?: () => void
 }
 export default (props: HoverButtonProps) => {
-	const { children, onClick, backgroundColor, ...rest } = props
+	const {
+		children,
+		onClick,
+		backgroundColor,
+		color,
+		pos,
+		top,
+		display,
+		...rest
+	} = props
 	return (
 		<Button
 			// style={{ color }}
@@ -16,6 +25,12 @@ export default (props: HoverButtonProps) => {
 			minH='45px'
 			minW='200px'
 			backgroundColor={backgroundColor}
+			color={color}
+			pos={pos}
+			top={top}
+			display={display}
+			border='transparent'
+			{...rest}
 		>
 			<Text m={0} fontSize='18px' fontWeight='semibold'>
 				{children}
