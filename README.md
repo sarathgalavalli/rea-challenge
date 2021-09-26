@@ -1,4 +1,4 @@
-# rea-challenge
+# Rea-challenge
 
 <b>
 Overview
