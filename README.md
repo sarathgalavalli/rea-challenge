@@ -1,6 +1,8 @@
 # rea-challenge
 
+<b>
 Overview
+</b>
 
 This project is a simple react-typescript based application where users can view properties and save them which are of interest by hovering on the property with their mouse cursor.
 Before we dive deep into the installation we need to make note of a few things.
