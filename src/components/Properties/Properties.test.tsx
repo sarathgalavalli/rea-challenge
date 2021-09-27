@@ -5,6 +5,8 @@ import * as data from '../../../data.json'
 
 describe('Properties', () => {
 	test('are Properties Rendered', () => {
-		render(<Properties data={data.results} headingText='Results' />)
+		render(
+			<Properties data={data.results} headingText='Results' isResult={true} />
+		)
 	})
 })
