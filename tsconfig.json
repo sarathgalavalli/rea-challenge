@@ -14,7 +14,7 @@
         "esModuleInterop": true,
         "sourceMap": true,
         "resolveJsonModule": true,
-        "types": ["cypress"]
+        "types": ["cypress", "node"]
         // "baseUrl": "src/"
         // "include": [
         //     "next-env.d.ts",
