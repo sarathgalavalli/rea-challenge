@@ -1,33 +1,26 @@
 import { Flex } from '@chakra-ui/react'
 import * as React from 'react'
+import { useEffect, useState } from 'react'
 import * as data from '../../../data.json'
 import SideBar from '../SideBar/SideBar'
 import Properties from '../Properties/Properties'
-import { useEffect, useState } from 'react'
 
-export interface DashboardProps {}
-export default (props: DashboardProps) => {
+export default ({}) => {
 	const [results, setResults] = useState(data.results)
 	const [saved, setSaved] = useState(data.saved)
 
-	const addProperty = (data: any, isResult: boolean) => {
+	const addProperty = (propertyData: any, isResult: boolean) => {
 		if (isResult) {
 			// remove from results
 			// push to saved
-			setSaved(saved.concat(data))
-			setResults(
-				results.filter((result: any) => {
-					return result.id !== data.id
-				})
-			)
+			setSaved(saved.concat(propertyData))
+			setResults(results.filter((result: any) => result.id !== propertyData.id))
 		} else {
-			//remove from saved
-			//push back to results
-			setResults(results.concat(data))
+			// remove from saved
+			// push back to results
+			setResults(results.concat(propertyData))
 			setSaved(
-				saved.filter((saved: any) => {
-					return saved.id !== data.id
-				})
+				saved.filter((savedResult: any) => savedResult.id !== propertyData.id)
 			)
 		}
 	}
@@ -40,7 +33,7 @@ export default (props: DashboardProps) => {
 			<Properties
 				data={results}
 				headingText='Results'
-				isResult={true}
+				isResult
 				addProperty={addProperty}
 			/>
 			{/* Column 2: Results */}
