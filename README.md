@@ -42,12 +42,7 @@ Step 2: Open terminal and change directory to rea-challenge and run
 npm install
 ```
 
-Step 3: Build the applciation
-```
-npm build
-```
-
-Step 4: Run the application. this should open the application in your browser via localhost:8080 until unless something else is running the port or already using the port.
+Step 3: Run the application. this should open the application in your browser via localhost:8080 until unless something else is running the port or already using the port.
 ```
 npm run dev
 ```
@@ -61,6 +56,28 @@ yarn storybook
 ```
 
 # Testing
+
+The tests used in this system has been divided into two groups.
+ 1. Basic unit test using Jest to test if the components are rendered on UI.
+ 2. Cypress tests to test the functionality of the application which can be viewed visually.
+
+Step 1: To run unit tests using jest:
+
+```
+npm run test
+```
+
+Step 2: To run cypress tests:
+
+```
+npm run cypress:open
+```
+
+When you install cypress and run cypress for the first time in your system there is a high change that the cypress does not open. In such cases just close the terminal; and re run the command. If you are not familiar with cypress test library the following link provides the details of cypress and its usage.
+
+https://www.cypress.io/
+
+
 
 
 
