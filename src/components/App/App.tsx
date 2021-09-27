@@ -5,6 +5,5 @@ import Dashboard from '../Dashboard/Dashboard'
 export interface AppProps {}
 
 export default function App(props: AppProps) {
-	// npx eslint src/components/* --fix
 	return <Dashboard />
 }
