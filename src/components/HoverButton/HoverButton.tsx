@@ -2,7 +2,6 @@ import { Button, ButtonProps, Text } from '@chakra-ui/react'
 import * as React from 'react'
 
 export interface HoverButtonProps extends ButtonProps {
-	children: any
 	onClick?: () => void
 }
 export default (props: HoverButtonProps) => {
@@ -30,7 +29,6 @@ export default (props: HoverButtonProps) => {
 			top={top}
 			display={display}
 			border='transparent'
-			{...rest}
 		>
 			<Text m={0} fontSize='18px' fontWeight='semibold'>
 				{children}

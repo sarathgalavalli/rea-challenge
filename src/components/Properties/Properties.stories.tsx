@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Properties from './Properties'
 import { storiesOf } from '@storybook/react'
+import Properties from './Properties'
 import * as data from '../../../data.json'
 
 storiesOf('Property', module)

@@ -44,14 +44,14 @@ export default (props: PropertiesProps) => {
 					</Flex>
 				)}
 				{data &&
-					data.map((data: any) => (
+					data.map((d: any) => (
 						<DisplayCard
-							logoUrl={data.agency.logo}
-							imageUrl={data.mainImage}
-							price={data.price}
-							headerColor={data.agency.brandingColors.primary}
+							logoUrl={d.agency.logo}
+							imageUrl={d.mainImage}
+							price={d.price}
+							headerColor={d.agency.brandingColors.primary}
 							isResult={isResult}
-							onClick={() => addProperty(data, isResult)}
+							onClick={() => addProperty(d, isResult)}
 						/>
 					))}
 			</Flex>

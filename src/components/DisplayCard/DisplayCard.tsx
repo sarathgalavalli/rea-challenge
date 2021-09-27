@@ -83,12 +83,13 @@ export default (props: DisplayCardProps) => {
 						{showButton && (
 							<HoverButton
 								className='hoverButton'
-								children={isResult ? 'Add' : 'Remove'}
 								mr={5}
 								color='fff'
 								backgroundColor={isResult ? 'green.300' : 'red.300'}
 								onClick={onClick}
-							/>
+							>
+								{isResult ? 'Add' : 'Remove'}
+							</HoverButton>
 						)}
 					</Flex>
 				</Box>

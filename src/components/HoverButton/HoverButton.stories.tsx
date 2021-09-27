@@ -1,9 +1,9 @@
 import * as React from 'react'
-import HoverButton from './HoverButton'
 import { storiesOf } from '@storybook/react'
+import HoverButton from './HoverButton'
 
 storiesOf('ColorButton', module)
 	.add('Accept', () => (
-		<HoverButton children='Accept' backgroundColor='#fcfa3b' />
+		<HoverButton backgroundColor='#fcfa3b'> Accept </HoverButton>
 	))
-	.add('Decline', () => <HoverButton children='Decline' />)
+	.add('Decline', () => <HoverButton> Decline </HoverButton>)

@@ -1,6 +1,6 @@
 import * as React from 'react'
-import DisplayCard from './DisplayCard'
 import { storiesOf } from '@storybook/react'
+import DisplayCard from './DisplayCard'
 
 storiesOf('DisplayCard', module)
 	.add('Display Card Results', () => (
@@ -9,7 +9,7 @@ storiesOf('DisplayCard', module)
 			imageUrl='https://i2.au.reastatic.net/640x480/20bfc8668a30e8cabf045a1cd54814a9042fc715a8be683ba196898333d68cec/main.jpg'
 			price='$726,500'
 			headerColor='#ffe512'
-			isResult={true}
+			isResult
 			onClick={() => console.log('clicked display result card')}
 		/>
 	))
