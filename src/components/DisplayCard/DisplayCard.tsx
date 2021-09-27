@@ -8,10 +8,12 @@ export interface DisplayCardProps extends BoxProps {
 	logoUrl: any
 	imageUrl: any
 	headerColor: any
+	isResult: boolean
+	onClick: () => void
 }
 
 export default (props: DisplayCardProps) => {
-	const { price, logoUrl, imageUrl, headerColor } = props
+	const { price, logoUrl, imageUrl, headerColor, isResult, onClick } = props
 
 	const [showButton, setShowButton] = useState(false)
 
@@ -32,7 +34,6 @@ export default (props: DisplayCardProps) => {
 				w='-webkit-fit-content'
 				border='transparent'
 				_hover={{
-					// opacity: 0.5,
 					cursor: 'default',
 				}}
 				onMouseEnter={event => {
@@ -45,20 +46,13 @@ export default (props: DisplayCardProps) => {
 			>
 				<Box
 					as={Flex}
-					// h='full'
 					direction='column'
 					borderRadius={5}
 					flex='1 1 auto'
 					w='-webkit-fit-content'
 				>
 					<Flex bgColor={headerColor} borderTopRadius={5}>
-						<Image
-							src={logoUrl}
-							alt='logo'
-							paddingTop={2}
-							paddingLeft={2}
-							paddingBottom={1}
-						/>
+						<Image src={logoUrl} alt='logo' p={2} />
 					</Flex>
 					<Flex bgColor='yellow' flexDir='column'>
 						<Image
@@ -68,31 +62,34 @@ export default (props: DisplayCardProps) => {
 							w='450px'
 							h='300px'
 						/>
-						<Flex h='100%' w='100%' alignItems='center' justifyContent='center'>
-							{showButton && (
-								<HoverButton
-									className='hoverButton'
-									children='Add'
-									pos='absolute'
-									top='50%'
-									color='fff'
-									backgroundColor='red'
-								/>
-							)}
-						</Flex>
 					</Flex>
 					<Flex
 						h='full'
 						minHeight='65px'
 						bgColor='white'
 						alignItems='center'
-						justifyContent='flex-start'
+						justifyContent='space-between'
 						paddingLeft={5}
 						flex='1 1 auto'
 					>
-						<Text fontFamily='Museo-Sans' fontSize='20px' letterSpacing={2}>
+						<Text
+							fontFamily='Museo-Sans'
+							fontSize='20px'
+							letterSpacing={2}
+							data-test-id={`price-${price}-${isResult ? 'Result' : 'Saved'}`}
+						>
 							Price: {price}
 						</Text>
+						{showButton && (
+							<HoverButton
+								className='hoverButton'
+								children={isResult ? 'Add' : 'Remove'}
+								mr={5}
+								color='fff'
+								backgroundColor={isResult ? 'green.300' : 'red.300'}
+								onClick={onClick}
+							/>
+						)}
 					</Flex>
 				</Box>
 			</Box>

@@ -30,13 +30,16 @@ export default (props: SideBarProps) => {
 						fontSize='4xl'
 						alignSelf='center'
 						letterSpacing='tight'
+						className='ProjectHeading'
 					>
 						Project.
 					</Heading>
 				</Flex>
 				<Flex flexDir='column' alignItems='center' mb={10} mt={5}>
-					<Avatar />
-					<Text textAlign='center'>Anonymous</Text>
+					<Avatar name='Anonymous' />
+					<Text className='avatarText' textAlign='center'>
+						Anonymous
+					</Text>
 				</Flex>
 			</Flex>
 		</Flex>

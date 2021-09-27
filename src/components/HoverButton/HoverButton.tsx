@@ -18,7 +18,7 @@ export default (props: HoverButtonProps) => {
 	} = props
 	return (
 		<Button
-			// style={{ color }}
+			data-test-id={children}
 			onClick={onClick}
 			borderRadius={12}
 			size='md'

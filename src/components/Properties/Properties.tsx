@@ -5,9 +5,12 @@ import DisplayCard from '../DisplayCard/DisplayCard'
 export interface PropertiesProps extends BoxProps {
 	data: any
 	headingText: string
+	isResult: boolean
+	addProperty?: (data: any, isResult: boolean) => void
 }
 export default (props: PropertiesProps) => {
-	const { headingText, data, bgColor, ...rest } = props
+	const { headingText, data, isResult, bgColor, addProperty, ...rest } = props
+
 	return (
 		<Flex
 			w='45%'
@@ -27,14 +30,30 @@ export default (props: PropertiesProps) => {
 				flexDir='column'
 				w='100%'
 			>
-				{data.map((data: any) => (
-					<DisplayCard
-						logoUrl={data.agency.logo}
-						imageUrl={data.mainImage}
-						price={data.price}
-						headerColor={data.agency.brandingColors.primary}
-					/>
-				))}
+				{data.length === 0 && (
+					<Flex
+						flex='1 1 auto'
+						h='100%'
+						w='100%'
+						justifyContent='center'
+						alignItems='center'
+					>
+						<Text fontSize='16px' opacity={0.5} fontWeight='bold'>
+							No Data
+						</Text>
+					</Flex>
+				)}
+				{data &&
+					data.map((data: any) => (
+						<DisplayCard
+							logoUrl={data.agency.logo}
+							imageUrl={data.mainImage}
+							price={data.price}
+							headerColor={data.agency.brandingColors.primary}
+							isResult={isResult}
+							onClick={() => addProperty(data, isResult)}
+						/>
+					))}
 			</Flex>
 		</Flex>
 	)
