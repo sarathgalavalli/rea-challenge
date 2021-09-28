@@ -37,7 +37,7 @@ Step 1: Clone the application from git into your local.
 git clone https://github.com/sarathgalavalli/rea-challenge.git
 ```
 
-Before proceding to step 2 please delete the node_modules and package-lock.json files.
+Before proceding to step 2 please delete the node_modules and package-lock.json files.<br/>
 Step 2: Open terminal and change directory to rea-challenge and run
 ```
 npm install
