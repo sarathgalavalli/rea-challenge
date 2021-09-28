@@ -26,7 +26,7 @@ export default ({}) => {
 	}
 
 	return (
-		<Flex h='100vh' direction='row' overflow='hidden' w="100%>
+		<Flex h='100vh' direction='row' overflow='hidden' w="100%">
 			{/* Side bar */}
 			<SideBar headingText='Project' signature='Anonymous' />
 			{/* Column 1: Saved */}
