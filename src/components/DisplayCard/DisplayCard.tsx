@@ -13,7 +13,8 @@ export interface DisplayCardProps extends BoxProps {
 }
 
 export default (props: DisplayCardProps) => {
-	const { price, logoUrl, imageUrl, headerColor, isResult, onClick } = props
+	const { price, logoUrl, imageUrl, headerColor, isResult, onClick, ...rest } =
+		props
 
 	const [showButton, setShowButton] = useState(false)
 
@@ -83,7 +84,6 @@ export default (props: DisplayCardProps) => {
 						{showButton && (
 							<HoverButton
 								className='hoverButton'
-								mr={5}
 								color='fff'
 								backgroundColor={isResult ? 'green.300' : 'red.300'}
 								onClick={onClick}

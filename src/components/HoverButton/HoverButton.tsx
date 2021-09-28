@@ -1,4 +1,5 @@
 import { Button, ButtonProps, Text } from '@chakra-ui/react'
+import { getRelatedTarget } from '@chakra-ui/utils'
 import * as React from 'react'
 
 export interface HoverButtonProps extends ButtonProps {
@@ -15,6 +16,8 @@ export default (props: HoverButtonProps) => {
 		display,
 		...rest
 	} = props
+
+	const hoverColor = backgroundColor === 'green.300' ? 'green.400' : 'red.400'
 	return (
 		<Button
 			data-test-id={children}
@@ -29,6 +32,8 @@ export default (props: HoverButtonProps) => {
 			top={top}
 			display={display}
 			border='transparent'
+			mr={3}
+			_hover={{ backgroundColor: hoverColor }}
 		>
 			<Text m={0} fontSize='18px' fontWeight='semibold'>
 				{children}
