@@ -10,7 +10,7 @@
     "build-storybook": "build-storybook -s public",
     "test": "jest",
     "test:watch": "jest --watch",
-    "cypress:open": "cypress open"
+    "cypress:open": "node_modules\\.bin\\cypress run --headed --browser chrome"
   },
   "repository": {
     "type": "git",
